@@ -1,0 +1,38 @@
+.admin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+.admin-list li {
+  background: #f4f8ff;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(30,58,138,0.04);
+}
+.admin-list li button {
+  margin-left: 1rem;
+}
+
+.button {
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #2563eb;
+}
+.button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}

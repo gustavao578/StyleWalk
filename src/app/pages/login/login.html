@@ -1,0 +1,13 @@
+<section class="login-area">
+  <div class="login-card">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <label for="user">Usuário:</label>
+      <input type="text" [(ngModel)]="username" name="user" required>
+      <label for="pass">Senha:</label>
+      <input type="password" [(ngModel)]="password" name="pass" required>
+      <button type="submit" class="main-btn">Entrar</button>
+      <div *ngIf="error" class="login-error">{{ error }}</div>
+    </form>
+  </div>
+</section>

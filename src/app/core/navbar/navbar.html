@@ -1,0 +1,6 @@
+<nav class="main-nav-bar">
+  <button class="nav-btn" routerLink="/">Produtos</button>
+  <button class="nav-btn" routerLink="/login">Login</button>
+  <button class="nav-btn" *ngIf="isAdmin" routerLink="/admin">Administração</button>
+  <button class="nav-btn" *ngIf="isLogged" (click)="logout()">Sair</button>
+</nav>

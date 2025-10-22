@@ -1,0 +1,35 @@
+
+<section class="admin-panel">
+  <div class="admin-card">
+    <h2>Painel de Administração</h2>
+    <form (ngSubmit)="addProduct()">
+      <input type="text" [(ngModel)]="newProduct.name" placeholder="Nome do Produto" name="name" required>
+      <input type="text" [(ngModel)]="newProduct.image" placeholder="URL da Imagem" name="image" required>
+      <textarea [(ngModel)]="newProduct.description" placeholder="Descrição do Produto" name="desc"></textarea>
+      <button type="submit" class="main-btn">Adicionar Produto</button>
+    </form>
+
+    <h3>Produtos Cadastrados</h3>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Imagem</th>
+          <th>Descrição</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.name }}</td>
+          <td><img [src]="p.image" width="60" /></td>
+          <td>{{ p.description }}</td>
+          <td>
+            <button (click)="editProduct(p)">Editar</button>
+            <button (click)="deleteProduct(p)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
