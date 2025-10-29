@@ -27,6 +27,33 @@
   background: #f4f8ff;
 }
 
+/* NOVO: Estilos genéricos para botões */
+.button {
+  background: #1e3a8a; /* Dark Blue */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 100%; /* Botões de formulário em largura total */
+  margin-top: 0.5rem;
+}
+.button:hover {
+  background: #2563eb; /* Medium Blue */
+  box-shadow: 0 4px 16px rgba(0,170,255,0.08);
+}
+.admin-table td .button {
+  width: auto; /* Botões dentro da tabela não têm largura total */
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+
 /* tabela */
 .table-responsive {
   width: 100%;
@@ -60,11 +87,7 @@
 .admin-table tr:last-child td {
   border-bottom: none;
 }
-.admin-table button {
-  margin-right: 0.5rem;
-}
-
-/* modal */
+/* Estilos de modal mantidos */
 .modal {
   position: fixed;
   top: 0;

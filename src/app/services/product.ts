@@ -1,44 +1,48 @@
 import { Injectable } from '@angular/core';
-import { of, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Product } from '../model/product.model';
+import { HttpClient } from '@angular/common/http'; // Importado
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private products: Product[] = [
-    { id: 1, name: 'Tênis Esportivo', image: 'https://via.placeholder.com/150', description: 'Ideal para corridas.' },
-    { id: 2, name: 'Sapato Social', image: 'https://via.placeholder.com/150', description: 'Couro legítimo.' }
-  ];
-  private nextId = 3;
+  // Define o endpoint da API para o recurso 'products' no JSON-SERVER (porta padrão 3000)
+  private readonly API = 'http://localhost:3000/products';
 
-  constructor() { }
+  // Injeção de dependência do HttpClient
+  constructor(private http: HttpClient) { }
 
+  // READ: Retorna todos os produtos [cite: 161]
   getProducts(): Observable<Product[]> {
-    return of(this.products);
+    return this.http.get<Product[]>(this.API);
   }
 
+  // CREATE: Adiciona um novo produto (o ID será gerado pelo JSON-SERVER) [cite: 177]
   addProduct(product: Omit<Product, 'id'>): Observable<Product> {
-    const newProduct: Product = { ...product, id: this.nextId++ };
-    this.products.push(newProduct);
-    return of(newProduct);
+    return this.http.post<Product>(this.API, product);
   }
 
+  // UPDATE: Atualiza um produto existente [cite: 180]
   updateProduct(productToUpdate: Product): Observable<Product> {
-    const index = this.products.findIndex(p => p.id === productToUpdate.id);
-    if (index > -1) {
-      this.products[index] = productToUpdate;
-      return of(productToUpdate);
-    }
-    return throwError(() => new Error('Produto não encontrado para atualização'));
+    const url = `${this.API}/${productToUpdate.id}`;
+    return this.http.put<Product>(url, productToUpdate).pipe(
+      catchError(error => {
+        console.error('Erro ao atualizar produto:', error);
+        return throwError(() => new Error('Produto não encontrado para atualização'));
+      })
+    );
   }
 
+  // DELETE: Exclui um produto pelo ID [cite: 182]
   deleteProduct(id: number): Observable<{}> {
-    const index = this.products.findIndex(p => p.id === id);
-    if (index > -1) {
-      this.products.splice(index, 1);
-      return of({});
-    }
-    return throwError(() => new Error('Produto não encontrado'));
+    const url = `${this.API}/${id}`;
+    return this.http.delete<{}>(url).pipe(
+      catchError(error => {
+        console.error('Erro ao excluir produto:', error);
+        return throwError(() => new Error('Produto não encontrado para exclusão'));
+      })
+    );
   }
 }
