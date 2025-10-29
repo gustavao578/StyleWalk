@@ -8,6 +8,10 @@
       <input type="password" [(ngModel)]="password" name="pass" required>
       <button type="submit" class="main-btn">Entrar</button>
       <div *ngIf="error" class="login-error">{{ error }}</div>
+    <button type="button" class="forgot-btn" routerLink="/forgot-password">Esqueci minha senha</button>
+
+      
+      <div *ngIf="info" class="login-info">{{ info }}</div>
     </form>
   </div>
 </section>
