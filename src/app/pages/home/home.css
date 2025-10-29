@@ -1,26 +1,31 @@
 #main-content {
-  max-width: 900px;
+  max-width: 1200px; /* Aumentado o max-width */
   margin: 2rem auto;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(30,58,138,0.08);
   padding: 2rem;
 }
+
 #product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  /* Grid com colunas mais largas e mais responsivas */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 24px; 
+  padding-top: 1rem;
 }
-.product {
-  border: 1px solid #e0e7ef;
-  border-radius: 8px;
-  padding: 1rem;
-  background: #f4f8ff;
+
+/* Estilos para o Mat-Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-.product img {
+
+/* Estilos para a imagem dentro do Mat-Card */
+.product-card img {
   max-width: 100%;
-  height: 120px;
+  height: 180px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem auto;
 }

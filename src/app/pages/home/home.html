@@ -1,10 +1,22 @@
-<section>
+<section id="main-content">
   <h2>Produtos em Destaque</h2>
-  <div class="product-list">
-    <div *ngFor="let product of products" class="product-card">
-      <img [src]="product.image" alt="{{ product.name }}">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.description }}</p>
-    </div>
+  
+  <div id="product-list">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      
+      <img mat-card-image [src]="product.image" alt="{{ product.name }}">
+      
+      <mat-card-content>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button color="primary">Ver Detalhes</button>
+        <button mat-button color="accent">Comprar</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </section>

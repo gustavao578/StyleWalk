@@ -1,4 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* Você deve garantir que o Angular Material e a fonte Roboto estejam aqui. */
+/* O comando 'ng add @angular/material' normalmente adiciona o import do tema. */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Exemplo de importação do tema (use o tema que você escolheu na instalação): */
+@import '@angular/material/prebuilt-themes/indigo-pink.css'; 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.main-btn {
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 100%;
+  margin-top: 1rem;
+}
+.main-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 16px rgba(0,170,255,0.08);
+}

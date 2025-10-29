@@ -4,10 +4,15 @@ import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product';
 import { Product } from '../../model/product.model';
 
+// Importações do Angular Material (Necessário rodar 'ng add @angular/material' primeiro)
+import { MatCardModule } from '@angular/material/card'; 
+import { MatButtonModule } from '@angular/material/button'; 
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  // ADICIONADO: Módulos do Angular Material
+  imports: [CommonModule, MatCardModule, MatButtonModule], 
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
