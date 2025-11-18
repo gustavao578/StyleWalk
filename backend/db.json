@@ -2,27 +2,99 @@
   "products": [
     {
       "id": "1",
-      "name": "Tênis Esportivo",
-      "image": "https://via.placeholder.com/150",
-      "description": "Ideal para corridas."
+      "name": "UltraBoost Runner",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
+      "description": "Conforto máximo para suas corridas diárias.",
+      "price": 899.90,
+      "category": "Masculino"
     },
     {
       "id": "2",
-      "name": "Sapato Social",
-      "image": "https://via.placeholder.com/150",
-      "description": "Couro legítimo."
+      "name": "Air Zoom Pegasus",
+      "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=500&q=80",
+      "description": "Leveza e velocidade para treinos intensos.",
+      "price": 749.90,
+      "category": "Masculino"
     },
     {
-      "id": "4791",
-      "name": "Samba",
-      "image": "data:image/webp;base64,UklGRvIIAABXRUJQVlA4IOYIAADwJwCdASqYAJgAPj0ejESiIaER+1UgIAPEtLdwuPBrezmOgP+3nu9/yQ+05CxxP1b/af2P0m77fiBqBet/8j+W3u4QEHBfsl9P/4nqrTVlVmgB+i/Q2/2f9J+W/uk+qf/N7hX83/sv/S9db2E/tR7TJE4l3nRWydku86K2TkHpon650QNZs8p/f//vTcu3jQ8gRFTcy3W0Y6vI77FB1CBVi85R4ASPWanjJYnj59QnbNf6rbeOuqF5luXJ2xLNSnRodt8LHjDmE8yzzCjc/KE7eRsq6H+TyUzhBD6oGjz2uFRh4o0QGheUziLAnY6UDEJr9Z147N9PcIibNUX2zTS0GZYahgNi+/8asNpcAnB9kKGvQKcsXYzCdcpRO8UpvpOHbOWyRipDOWHVSVh61Iz5svWH7kfeWlQeFNpWQRInsnZLvOitk66AAP7/rCAAAABSNFD5+6YQUTfXXdFzCWdJvpv9ixcmh8LjJ0Lc4OFPgl5qdVXJxiUJ2yMxyMt+9wYh3JNpfjaQEI5wxr1cnCXScNxTiChgGh2Ma82nfvu9Y7h/NEYu4Gpa/vfbo99Nq5tj6QXDOMYwma0Ro6FVlcVhr+klqyvYtgK/seMH/8lCl0miOUdHtaUOVrO+8vWl4oNotDTmv4smQvD70E22cmWyf63ApkAXUVpPa3vnhkhJPu5UEy+MTr5AZ2KCWcp8E1m3O1rSo9xNbr6OrvtUhHBG2Ow8hfUJW84NjgqonWflecGcrvrBHkgHlFY5o/agvTwjm9piR2wGumQ9o7dtyD8HtZC49vBf2bHa6CPIG9+/SoLkhisMf/Vj5sZKA1vfABJ6bylu8khCoZlt5Hp20HdLzrXX/uJ4L5GgFn+cxXdnNpKPR/jv3aW6AqZv3h2oAUJnPxHnEI3U4cXVf+MXx6ZwOw5SZI+I+yQL82EmfaKcfuYn8ZGxT1PqBbxqFr0T+zVt8T/f0utoegEMCUazN1ZxW5+Z7LXKs0d4cjPjx/Ltmxeore2jEWM+i0pWAkU6T5O5sSuQA2cqpUPjVPIkMgXTXuEVVTRbwP3KjnmpIYF0TkRpQQ4Sy009ldKRppVzqJXep8GEctXeTSHxygQjo2pYM92TQM4yRAf/RTn+kxigOGh/brxKIb8cLEp8rVwNR+Z/GQ9ma8w+fFpnBNzdukuPcr7NpyLw8SDPMCNZy+OB4Zu6FzOwzB5jrLG37b45l+9K7iDvmFZt8CRNuBR7eVWpnvSTcf2aiEUGR1ifTAQAEKHMrfHdC1V9IPS298CTYsA2jsM1sUqL8N/3xvpHjl9OJLz8mbf0J2nERGHZZrmES9Vwjd99opkTsuALU5+Kj4by5axrAxasTEJ59a6Lf0EXY7LRvbuK6aylcs6j/mxcD+kcWYsKSjJi4MmSKdOJGdatzBXEW1E0jkEMUpYchSH8/0R2g93LsUJC6WnXgR0aLBjrrkpAUih1kYTh1mE46SjHWWp8Ouqc4K4rcIf+TYURPHWddzg6hdFvIDQ8FXX6LWBDZk5Tqp8bUutqCtRdstFsBkBtW/E6q7SERJQScdAy1UoDjVQ70kIh1DbbPItAERSNJrHTF926YWsLEEwevt2oMYCdrMIN/s66cIdc8PYHSKlk37jdK72HX3TNr0xoWoK2pEPswWDUgmyfwQch84eGOMY1GvNJ4HkXqrG92f/v+UrWx4BUqJqjTHUmOcmPQypj7wb1ya/MPhqRR3osC82IJOnJcNG8Tqr16BnQordPrEtq/6tL2je90tp9SE0RImmXBd3s/hB3rcxOnzJE4+YJjsFiqJyC68nyAXXP7fVhvF53xr7IrwIhzbyaRn1V3KbAoKRiG5eV1ho9JXoldZNv3YTg3WCMAaeHWSqcCzDZFLzOOdOLF0/B4QWB+G1+CmGy/e4XRIsaLdZ7sV81rLIx8zHoh0A1vvl8C6aI2QdYltpYFhxRfs8BvKOM4/pfiSg/1J8keJqMl6C8boCTDq5fmM8Xeg771f6eKkpgFx2R+Kdyf1whv7+zrt4ed2ahJ6UXomJ0yTcHQcLN5B0z93gGyEusSaBIrHz2sfNWKamNcKUIb3tq0PSzzFaMUlWBuFaSQp2DAwBN1Pt8JSZTh35vAP0ifnFsTePmd2Z1newrZ/CTc2IFYmzZN3QXzYV3c1DBHZ0rFIH2ntczygiJ4ajl/Ka8kgoo3vI0ND8jqsT3hCbC2e+japGQtnE2JzkNrSXWYl/m2JhbA/OGQ95xO2pLL/RadNnswqmjrYRpM7tOnagVj73QrMv4KR8SmbNTdMWmPxCo/XPBk5d9HoL4P3LHL4QMbszTWlxhsZME9lExk716h1DDDMn6zhSOZeRqO/ysZv69sVscVsNGCVLY12hnuA3FxuIsPgsd2PtQ4b3eMsn33FXPlxoiOYWDHIkyMayOd94gLRLIUnHbn0FdElWxZJL1/HPUhga6z+vm34hO/eV0y8P+5WEFIJw55cnH3Clr6fNn4lEp1gY6rGW1GeLyRN1pGkAWx2BSMVmXvfpcxp7+N/iy3P/h9l6Tuejcq5tz21wGHbrJcdZ4MunOc2vIHhlbTB+TnU/+xK4/xm4hKrjsirnuYu4uBQMFjuAQjgmakc00od3z4VR4pncSrQAr7zbfwjHNhEXKLrSmUzwraN40dnuiwfUcJxrNErRHDwC3kCQXnoZa3bR2rqCkyytcxrjX3CT/7KJ/rVn2NP60N6aF22rd5rtXUsdfOHllZ9IQz03EIFsOwP371osqGdu7Of+N3iKDyx9UK0nGY1rh6TY08ONQBwNQYo/2oiGWvyaDrReEmI6Sngpd7EN721Kvgm+2a/dIlKEENE0P85eqsqFtBbOUPgs+VHoS97GCtCCsvK2ISATUGLXtTr5DJqn99nme8wWhzvPzSa7BVCNyKoQu0UAmLKWGGPhNB4P6z6p0tgyR7Jp0CiK3R0PQsNxbnspzYfIlJ4/RU3z9lwv9cDnK9nrBJlBZZ00BmRH1BNA8IeMIAz90BCqh0BE5g66VPXRd22WHLzjtG/CQI8AAAAAAAAAA",
-      "description": "tênis feio"
+      "id": "3",
+      "name": "Classic Leather",
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80",
+      "description": "Estilo casual para o dia a dia.",
+      "price": 399.90,
+      "category": "Unissex"
     },
     {
-      "id": "7573",
-      "name": "Chuteira",
-      "image": "https://static.netshoes.com.br/produtos/chuteira-campo-adidas-deportivo-iii-campo-unissex/72/FB9-8305-172/FB9-8305-172_zoom1.jpg?ts=1761713518&ims=1088x",
-      "description": "Chuteira preta adidas\n"
+      "id": "4",
+      "name": "Future Rider",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=500&q=80",
+      "description": "Design retro com tecnologia moderna.",
+      "price": 499.90,
+      "category": "Feminino"
+    },
+    {
+      "id": "5",
+      "name": "Revolution 6",
+      "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=500&q=80",
+      "description": "Amortecimento macio para caminhadas.",
+      "price": 329.90,
+      "category": "Feminino"
+    },
+    {
+      "id": "6",
+      "name": "Court Vision Low",
+      "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=80",
+      "description": "Visual clássico do basquete dos anos 80.",
+      "price": 449.90,
+      "category": "Unissex"
+    },
+    {
+      "id": "7",
+      "name": "Duramo SL",
+      "image": "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&w=500&q=80",
+      "description": "Versatilidade para academia e rua.",
+      "price": 299.90,
+      "category": "Masculino"
+    },
+    {
+      "id": "8",
+      "name": "Charged Assert",
+      "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=500&q=80",
+      "description": "Durabilidade e estabilidade superior.",
+      "price": 379.90,
+      "category": "Masculino"
+    },
+    {
+      "id": "9",
+      "name": "Flex Experience",
+      "image": "https://images.unsplash.com/photo-1560769629-975e13f0c470?auto=format&fit=crop&w=500&q=80",
+      "description": "Movimento natural para seus pés.",
+      "price": 359.90,
+      "category": "Feminino"
+    },
+    {
+      "id": "10",
+      "name": "Smash v2",
+      "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=500&q=80",
+      "description": "Ícone do tênis para o seu lifestyle.",
+      "price": 279.90,
+      "category": "Unissex"
+    },
+    {
+      "id": "11",
+      "name": "Downshifter 12",
+      "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80",
+      "description": "Suporte leve e flexível.",
+      "price": 349.90,
+      "category": "Infantil"
+    },
+    {
+      "id": "12",
+      "name": "Coreracer",
+      "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=500&q=80",
+      "description": "Conforto o dia todo.",
+      "price": 249.90,
+      "category": "Feminino"
     }
   ]
 }

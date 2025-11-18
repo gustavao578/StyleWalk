@@ -1,31 +1,168 @@
-#main-content {
-  max-width: 1200px; /* Aumentado o max-width */
-  margin: 2rem auto;
+/* Hero Banner */
+.hero-banner {
+  height: 500px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(30,58,138,0.08);
-  padding: 2rem;
+  color: #111;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Main Content */
+#main-content {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.view-all {
+  color: #111;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 #product-list {
   display: grid;
-  /* Grid com colunas mais largas e mais responsivas */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 24px; 
-  padding-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-/* Estilos para o Mat-Card */
-.product-card {
+/* Modern Card */
+.product-card-modern {
+  background: #fff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card-modern:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  background: #f6f6f6;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.product-card-modern:hover img {
+  transform: scale(1.05);
+}
+
+.category-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-details {
+  padding: 1rem 0;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  color: #111;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 1rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-action {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Estilos para a imagem dentro do Mat-Card */
-.product-card img {
-  max-width: 100%;
-  height: 180px;
-  object-fit: contain;
-  margin: 0 auto 0.5rem auto;
+.price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.add-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
 }

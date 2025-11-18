@@ -1,0 +1,48 @@
+<section class="register-area">
+  <div class="register-card">
+    <div class="register-header">
+      <h2>Junte-se ao StyleWalk</h2>
+      <p>Sua jornada esportiva começa aqui.</p>
+    </div>
+    
+    <form (ngSubmit)="register()">
+      <div class="form-group">
+        <label>Nome Completo</label>
+        <input type="text" [(ngModel)]="formData.name" name="name" required placeholder="Ex: João Silva">
+      </div>
+
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" [(ngModel)]="formData.email" name="email" required placeholder="seu@email.com">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" [(ngModel)]="formData.phone" name="phone" required placeholder="(11) 99999-9999">
+        </div>
+        <div class="form-group">
+            <label>Endereço</label>
+            <input type="text" [(ngModel)]="formData.address" name="address" required placeholder="Rua, número...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Senha</label>
+          <input type="password" [(ngModel)]="formData.password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label>Confirmar Senha</label>
+          <input type="password" [(ngModel)]="formData.confirmPassword" name="confirmPassword" required>
+        </div>
+      </div>
+
+      <button type="submit" class="register-btn">CRIAR CONTA</button>
+    </form>
+
+    <div class="login-link">
+      Já possui uma conta? <a routerLink="/login">Fazer Login</a>
+    </div>
+  </div>
+</section>

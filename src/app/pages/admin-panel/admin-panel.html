@@ -3,22 +3,17 @@
     <h2>{{ isEditing ? 'Editar Produto' : 'Adicionar Novo Produto' }}</h2>
     
     <form (ngSubmit)="saveProduct()" class="admin-form">
-      <input type="text" 
-             [(ngModel)]="productFormData.name" 
-             placeholder="Nome do Produto" 
-             name="name" 
-             required>
+      <div class="form-row" style="display: flex; gap: 1rem;">
+        <input type="text" [(ngModel)]="productFormData.name" placeholder="Nome do Produto" name="name" required style="flex: 2;">
+        <input type="text" [(ngModel)]="productFormData.category" placeholder="Categoria (Ex: Masculino)" name="category" required style="flex: 1;">
+      </div>
       
-      <input type="text" 
-             [(ngModel)]="productFormData.image" 
-             placeholder="URL da Imagem" 
-             name="image" 
-             required>
+      <div class="form-row" style="display: flex; gap: 1rem;">
+          <input type="text" [(ngModel)]="productFormData.image" placeholder="URL da Imagem" name="image" required style="flex: 2;">
+          <input type="number" [(ngModel)]="productFormData.price" placeholder="Preço (R$)" name="price" required style="flex: 1;">
+      </div>
       
-      <textarea [(ngModel)]="productFormData.description" 
-                placeholder="Descrição do Produto" 
-                name="desc">
-      </textarea>
+      <textarea [(ngModel)]="productFormData.description" placeholder="Descrição do Produto" name="desc" rows="3"></textarea>
       
       <button type="submit" class="button">
         {{ isEditing ? 'Salvar Alterações' : 'Adicionar Produto' }}
@@ -29,26 +24,30 @@
       </button>
     </form>
 
-    <h3>Produtos Cadastrados</h3>
+    <h3>Inventário</h3>
     <div class="table-responsive">
         <table class="admin-table">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Nome</th>
               <th>Imagem</th>
-              <th>Descrição</th>
+              <th>Info</th>
+              <th>Preço</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let p of products">
-              <td>{{ p.id }}</td>
-              <td>{{ p.name }}</td> <td><img [src]="p.image" width="60" /></td>
-              <td>{{ p.description }}</td>
+              <td>#{{ p.id }}</td>
+              <td><img [src]="p.image" width="50" height="50" style="object-fit: cover; border-radius: 4px;"></td>
               <td>
-                <button class="button" (click)="editProduct(p)">Editar</button>
-                <button class="button" (click)="deleteProduct(p)" style="background: #dc2626;">Excluir</button>
+                <strong>{{ p.name }}</strong><br>
+                <small>{{ p.category }}</small>
+              </td>
+              <td>{{ p.price | currency:'BRL' }}</td>
+              <td>
+                <button class="button" (click)="editProduct(p)" style="padding: 0.3rem 0.8rem; font-size: 0.8rem; margin: 0;">Editar</button>
+                <button class="button" (click)="deleteProduct(p)" style="background: #dc2626; padding: 0.3rem 0.8rem; font-size: 0.8rem; margin: 0 0 0 5px;">Excluir</button>
               </td>
             </tr>
           </tbody>

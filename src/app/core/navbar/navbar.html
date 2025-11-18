@@ -1,6 +1,31 @@
 <nav class="main-nav-bar">
-  <button class="nav-btn" routerLink="/">Produtos</button>
-  <button class="nav-btn" routerLink="/login">Login</button>
-  <button class="nav-btn" *ngIf="isAdmin" routerLink="/admin">Administração</button>
-  <button class="nav-btn" *ngIf="isLogged" (click)="logout()">Sair</button>
+  <div class="nav-container">
+    <div class="brand">StyleWalk</div>
+    
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      
+      <a *ngIf="!isAdmin" routerLink="/" routerLinkActive="active">Produtos</a>
+      
+      <a *ngIf="isAdmin" routerLink="/admin" routerLinkActive="active">Dashboard</a>
+    </div>
+
+    <div class="nav-actions">
+      <ng-container *ngIf="!isLogged">
+        <a routerLink="/login" class="nav-btn-outline">Login</a>
+        <a routerLink="/register" class="nav-btn-filled">Criar Conta</a>
+      </ng-container>
+
+      <ng-container *ngIf="isLogged && !isAdmin">
+        <span class="welcome-msg">Olá, {{ currentUserName }}</span>
+        <button class="icon-btn" title="Carrinho">🛒</button>
+        <button (click)="logout()" class="nav-btn-outline">Sair</button>
+      </ng-container>
+
+      <ng-container *ngIf="isAdmin">
+        <span class="admin-badge">ADMIN</span>
+        <button (click)="logout()" class="nav-btn-outline">Sair</button>
+      </ng-container>
+    </div>
+  </div>
 </nav>
