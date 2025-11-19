@@ -1,31 +1,38 @@
-<nav class="main-nav-bar">
+<nav class="client-nav">
   <div class="nav-container">
-    <div class="brand">StyleWalk</div>
-    
+    <div class="logo-area" routerLink="/">
+      <img src="assets/logo-white.png" alt="StyleWalk" class="logo-img"> 
+      <span class="site-title">STYLEWALK</span>
+    </div>
+
     <div class="nav-links">
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-      
-      <a *ngIf="!isAdmin" routerLink="/" routerLinkActive="active">Produtos</a>
-      
-      <a *ngIf="isAdmin" routerLink="/admin" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/" class="nav-link">LANÇAMENTOS</a>
+      <a routerLink="/" class="nav-link">MASCULINO</a>
+      <a routerLink="/" class="nav-link">FEMININO</a>
+      <a routerLink="/" class="nav-link">INFANTIL</a>
+      <a routerLink="/" class="nav-link">ESPORTES</a>
     </div>
 
     <div class="nav-actions">
-      <ng-container *ngIf="!isLogged">
-        <a routerLink="/login" class="nav-btn-outline">Login</a>
-        <a routerLink="/register" class="nav-btn-filled">Criar Conta</a>
-      </ng-container>
+      <div class="search-wrapper">
+        <input type="text" placeholder="Buscar...">
+        <span class="material-icons search-icon">search</span>
+      </div>
 
-      <ng-container *ngIf="isLogged && !isAdmin">
-        <span class="welcome-msg">Olá, {{ currentUserName }}</span>
-        <button class="icon-btn" title="Carrinho">🛒</button>
-        <button (click)="logout()" class="nav-btn-outline">Sair</button>
-      </ng-container>
+      <div class="icons-area">
+        <button class="icon-btn"><span class="material-icons">favorite_border</span></button>
 
-      <ng-container *ngIf="isAdmin">
-        <span class="admin-badge">ADMIN</span>
-        <button (click)="logout()" class="nav-btn-outline">Sair</button>
-      </ng-container>
+        <button class="icon-btn" *ngIf="!isLogged" routerLink="/login">
+          <span class="material-icons">person_outline</span>
+        </button>
+
+        <button class="icon-btn"><span class="material-icons">shopping_bag</span></button>
+
+        <button class="logout-btn" *ngIf="isLogged" (click)="logout()">
+          <span class="material-icons">logout</span>
+          <span class="logout-text">sair</span>
+        </button>
+      </div>
     </div>
   </div>
 </nav>

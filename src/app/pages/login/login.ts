@@ -1,10 +1,8 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../services/auth'; // 1. Importe o AuthService
-import { RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-login',
@@ -18,21 +16,25 @@ export class LoginComponent {
   password = '';
   error = '';
   info = '';
-  
 
-  // 2. Injete o AuthService
   constructor(private authService: AuthService, private router: Router) { }
 
   login() {
-    // 3. Use o serviço para fazer o login
-    if (this.username === 'admin' && this.password === 'admin') {
-      // Lógica de login bem-sucedida
-      this.router.navigate(['/admin']);
+    // Agora chamamos o serviço para verificar as credenciais
+    const loginSucesso = this.authService.login(this.username, this.password);
+
+    if (loginSucesso) {
+      // Se for Admin, vai para o painel administrativo
+      if (this.authService.userRole === 'admin') {
+        this.router.navigate(['/admin']);
+      } else {
+        // Se for Cliente, vai para a Home
+        this.router.navigate(['/home']);
+      }
     } else {
       this.error = 'Usuário ou senha inválidos.';
     }
   }
-
 
   forgotPassword() {
     if (!this.username) {
@@ -41,5 +43,4 @@ export class LoginComponent {
     }
     this.info = `Um link de recuperação foi enviado para o e-mail cadastrado de ${this.username}.`;
   }
-
 }

@@ -1,107 +1,162 @@
-.main-nav-bar {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 0 2rem;
+.client-nav {
+  background-color: #000000; /* Fundo Preto */
+  color: #ffffff;
   height: 70px;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 0 2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.brand {
+/* Logo */
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.site-title {
+  font-weight: 900;
   font-size: 1.5rem;
-  font-weight: 800;
-  color: #111;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  letter-spacing: -1px;
 }
 
+/* Links Centrais */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.nav-links a {
+.nav-link {
+  color: #fff;
   text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s;
+  font-size: 0.9rem;
+  font-weight: 700; /* Negrito */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 4px;
 }
 
-.nav-links a:hover, .nav-links a.active {
-  color: #111;
+.nav-link:hover {
+  color: #ccc;
 }
 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Ações Direita */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.nav-btn-outline {
-  background: transparent;
-  border: 1px solid #111;
-  color: #111;
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s;
+/* Busca */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.nav-btn-outline:hover {
-  background: #111;
+.search-wrapper input {
+  background-color: #333;
+  border: none;
+  padding: 8px 35px 8px 12px;
+  border-radius: 4px;
   color: #fff;
-}
-
-.nav-btn-filled {
-  background: #111;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
-  font-weight: 600;
   font-size: 0.9rem;
-  border: 1px solid #111;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s;
+  width: 150px;
+  transition: width 0.3s;
 }
 
-.nav-btn-filled:hover {
-  opacity: 0.8;
+.search-wrapper input:focus {
+  width: 200px;
+  outline: none;
+  background-color: #444;
 }
 
-.welcome-msg {
-  font-size: 0.9rem;
-  font-weight: 500;
+.search-icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2rem;
+  color: #aaa;
+  pointer-events: none;
+}
+
+/* Ícones */
+.icons-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .icon-btn {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  color: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
-.admin-badge {
-  background: #dc2626;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: bold;
+.icon-btn .material-icons {
+  font-size: 1.5rem;
+}
+
+.icon-btn:hover {
+  color: #ddd;
+}
+
+/* Botão Sair Específico */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #ffcccc; /* Um tom levemente rosado/vermelho claro para destaque sutil */
+  cursor: pointer;
+  gap: 4px;
+  border-left: 1px solid #444;
+  padding-left: 12px;
+  margin-left: 5px;
+}
+
+.logout-btn:hover {
+  color: #ff4444;
+}
+
+.logout-text {
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .nav-links, .search-wrapper {
+    display: none;
+  }
 }

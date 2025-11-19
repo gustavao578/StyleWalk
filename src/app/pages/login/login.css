@@ -89,3 +89,42 @@
   margin-top: 1rem;
   font-size: 0.95rem;
 }
+
+.forgot-password-area {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.link-btn:hover {
+    text-decoration: underline;
+    color: #00aaff;
+}
+
+/* Estilos para a área de cadastro */
+.register-area {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.register-area a {
+    color: #00aaff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.register-area a:hover {
+    color: #008ecc;
+    text-decoration: underline;
+}

@@ -1,17 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { Header } from "./core/header/header";
-
-
+import { CommonModule } from '@angular/common';
+import { Header } from "./core/header/header"; // Admin Header
+import { Navbar } from "./core/navbar/navbar"; // Client Navbar
+import { AuthService } from './services/auth';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, FormsModule
-],
+  standalone: true,
+  imports: [RouterOutlet, Header, Navbar, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('stylewalk');
+  constructor(public authService: AuthService) {}
 }

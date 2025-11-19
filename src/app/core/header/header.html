@@ -1,21 +1,16 @@
-<header class="main-header">
-  <div class="logo-area">
-    <img src="assets/logo.png" alt="Logo" class="logo-img" />
-    <span class="site-title">StyleWalk</span>
+<header class="admin-header">
+  <div class="admin-logo">
+    <span class="material-icons">admin_panel_settings</span>
+    <span>StyleWalk ADMIN</span>
   </div>
-  <nav class="main-nav">
-    <button class="nav-btn" routerLink="home">Produtos</button>
-    <a routerLink="/" class="nav-link">LANÇAMENTOS</a>
-    <a routerLink="/" class="nav-link">MASCULINO</a>
-    <a routerLink="/" class="nav-link">FEMININO</a>
-    <a routerLink="/" class="nav-link">INFANTIL</a>
-    <a routerLink="/" class="nav-link">ESPORTES</a>
+
+  <nav class="admin-nav">
+    <a routerLink="/admin" class="admin-link">Dashboard</a>
+    <a routerLink="/admin" class="admin-link">Cadastro de Produtos</a>
+    <a routerLink="/admin" class="admin-link">Gerenciar Produtos</a>
   </nav>
-  <div class="header-actions">
-    <input type="text" class="search-box" placeholder="Buscar..." />
-    <span class="icon user"></span>
-    <span class="icon heart"></span>
-    <span class="icon cart"></span>
-    <a routerLink="/login" class="logout">Sair</a>
-  </div>
+
+  <button class="admin-logout" (click)="logout()">
+    Logout <span class="material-icons">exit_to_app</span>
+  </button>
 </header>

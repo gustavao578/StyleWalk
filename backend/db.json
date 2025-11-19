@@ -5,7 +5,7 @@
       "name": "UltraBoost Runner",
       "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
       "description": "Conforto máximo para suas corridas diárias.",
-      "price": 899.90,
+      "price": 899.9,
       "category": "Masculino"
     },
     {
@@ -13,15 +13,15 @@
       "name": "Air Zoom Pegasus",
       "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=500&q=80",
       "description": "Leveza e velocidade para treinos intensos.",
-      "price": 749.90,
-      "category": "Masculino"
+      "price": 749.9,
+      "category": "Feminino"
     },
     {
       "id": "3",
       "name": "Classic Leather",
       "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80",
       "description": "Estilo casual para o dia a dia.",
-      "price": 399.90,
+      "price": 399.9,
       "category": "Unissex"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Future Rider",
       "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=500&q=80",
       "description": "Design retro com tecnologia moderna.",
-      "price": 499.90,
+      "price": 499.9,
       "category": "Feminino"
     },
     {
@@ -37,15 +37,15 @@
       "name": "Revolution 6",
       "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=500&q=80",
       "description": "Amortecimento macio para caminhadas.",
-      "price": 329.90,
-      "category": "Feminino"
+      "price": 329.9,
+      "category": "Masculino"
     },
     {
       "id": "6",
       "name": "Court Vision Low",
       "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=80",
       "description": "Visual clássico do basquete dos anos 80.",
-      "price": 449.90,
+      "price": 449.9,
       "category": "Unissex"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Duramo SL",
       "image": "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&w=500&q=80",
       "description": "Versatilidade para academia e rua.",
-      "price": 299.90,
+      "price": 299.9,
       "category": "Masculino"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Charged Assert",
       "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=500&q=80",
       "description": "Durabilidade e estabilidade superior.",
-      "price": 379.90,
+      "price": 379.9,
       "category": "Masculino"
     },
     {
@@ -69,7 +69,7 @@
       "name": "Flex Experience",
       "image": "https://images.unsplash.com/photo-1560769629-975e13f0c470?auto=format&fit=crop&w=500&q=80",
       "description": "Movimento natural para seus pés.",
-      "price": 359.90,
+      "price": 359.9,
       "category": "Feminino"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Smash v2",
       "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=500&q=80",
       "description": "Ícone do tênis para o seu lifestyle.",
-      "price": 279.90,
+      "price": 279.9,
       "category": "Unissex"
     },
     {
@@ -85,7 +85,7 @@
       "name": "Downshifter 12",
       "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80",
       "description": "Suporte leve e flexível.",
-      "price": 349.90,
+      "price": 349.9,
       "category": "Infantil"
     },
     {
@@ -93,7 +93,7 @@
       "name": "Coreracer",
       "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=500&q=80",
       "description": "Conforto o dia todo.",
-      "price": 249.90,
+      "price": 249.9,
       "category": "Feminino"
     }
   ]

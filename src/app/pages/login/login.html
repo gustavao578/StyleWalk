@@ -1,17 +1,27 @@
 <section class="login-area">
   <div class="login-card">
-    <h2>Login</h2>
+    <h2>Bem-vindo</h2>
     <form (ngSubmit)="login()">
-      <label for="user">Usuário:</label>
-      <input type="text" [(ngModel)]="username" name="user" required>
-      <label for="pass">Senha:</label>
-      <input type="password" [(ngModel)]="password" name="pass" required>
-      <button type="submit" class="main-btn">Entrar</button>
-      <div *ngIf="error" class="login-error">{{ error }}</div>
-    <button type="button" class="forgot-btn" routerLink="/forgot-password">Esqueci minha senha</button>
-
+      <label for="user">Usuário</label>
+      <input type="text" [(ngModel)]="username" name="user" required placeholder="Seu usuário">
       
+      <label for="pass">Senha</label>
+      <input type="password" [(ngModel)]="password" name="pass" required placeholder="Sua senha">
+      
+      <button type="submit" class="main-btn">ENTRAR</button>
+      
+      <div *ngIf="error" class="login-error">{{ error }}</div>
+
+      <div class="forgot-password-area">
+        <button type="button" class="link-btn" routerLink="/forgot-password">Esqueci minha senha</button>
+      </div>
+
       <div *ngIf="info" class="login-info">{{ info }}</div>
     </form>
+    
+    <div class="register-area">
+      <p>Não tem conta? <a routerLink="/register">Cadastre-se aqui.</a></p>
+    </div>
+
   </div>
 </section>

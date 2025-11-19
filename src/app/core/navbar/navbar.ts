@@ -1,28 +1,20 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css']
 })
 export class Navbar {
-  constructor(private authService: AuthService, private router: Router) {}
-
-  get isAdmin() {
-    return this.authService.userRole === 'admin';
-  }
+  constructor(public authService: AuthService, private router: Router) {}
 
   get isLogged() {
     return this.authService.isLoggedIn;
-  }
-
-  get currentUserName() {
-    return this.authService.currentUser;
   }
 
   logout(): void {
