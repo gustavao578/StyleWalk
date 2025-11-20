@@ -11,11 +11,8 @@ import { AuthService } from '../../services/auth';
   styleUrls: ['./navbar.css']
 })
 export class Navbar {
+  // Injetamos o AuthService como 'public' para usar direto no HTML
   constructor(public authService: AuthService, private router: Router) {}
-
-  get isLogged() {
-    return this.authService.isLoggedIn;
-  }
 
   logout(): void {
     this.authService.logout();

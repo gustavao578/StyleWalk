@@ -1,8 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Header } from "./core/header/header"; // Admin Header
-import { Navbar } from "./core/navbar/navbar"; // Client Navbar
+import { Navbar } from "./core/navbar/navbar"; // Client/Guest Navbar
 import { AuthService } from './services/auth';
 
 @Component({

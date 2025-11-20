@@ -1,3 +1,11 @@
-<app-header></app-header>
-<app-navbar></app-navbar>
+<!-- Lógica de Exibição das Navbars -->
+
+<!-- 1. Navbar do ADMIN (header/) -->
+<app-header *ngIf="authService.isAdmin()"></app-header>
+
+<!-- 2. Navbar do CLIENTE/VISITANTE (navbar/) -->
+<!-- Aparece se NÃO for admin (ou seja, se for guest ou client) -->
+<app-navbar *ngIf="!authService.isAdmin()"></app-navbar>
+
+<!-- Conteúdo das páginas -->
 <router-outlet></router-outlet>
