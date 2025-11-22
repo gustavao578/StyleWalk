@@ -5,6 +5,11 @@ import { AdminPanelComponent } from './pages/admin-panel/admin-panel';
 import { HomeComponent } from './pages/home/home';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password';
 import { RegisterComponent } from './pages/register/register';
+import { Lancamentos } from './pages/lancamentos/lancamentos';
+import { Masculino } from './pages/masculino/masculino';
+import { Feminino } from './pages/feminino/feminino';
+import { Infantil } from './pages/infantil/infantil';
+import { Esportes } from './pages/esportes/esportes';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redireciona para home
@@ -13,6 +18,11 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'admin', component: AdminPanelComponent }, 
     { path: 'forgot-password', component: ForgotPasswordComponent},
+    { path: 'lancamentos', component: Lancamentos },
+    { path: 'masculino', component: Masculino },
+    { path: 'feminino', component: Feminino },
+    { path: 'infantil', component: Infantil },
+    { path: 'esportes', component: Esportes },
 ];
 
 @NgModule({

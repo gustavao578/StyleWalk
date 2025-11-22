@@ -95,6 +95,62 @@
       "description": "Conforto o dia todo.",
       "price": 249.9,
       "category": "Feminino"
+    },
+    {
+      "id": "13",
+      "name": "Bola Mágica Arco-Íris",
+      "image": "",
+      "description": "Bola super macia e colorida que acende ao quicar. Ideal para crianças pequenas.",
+      "price": 49.9,
+      "category": "Infantil"
+    },
+    {
+      "id": "14",
+      "name": "Quebra-Cabeça Gigante da Selva",
+      "image": "",
+      "description": "Quebra-cabeça de 50 peças extra-grandes, com ilustrações de animais da selva.",
+      "price": 79.9,
+      "category": "Infantil"
+    },
+    {
+      "id": "15",
+      "name": "Kit de Blocos Construtores Espaciais",
+      "image": "",
+      "description": "Conjunto com 100 blocos para montar naves espaciais e robôs.",
+      "price": 119.9,
+      "category": "Infantil"
+    },
+    {
+      "id": "16",
+      "name": "Camisa Térmica Pro-Dry",
+      "image": "",
+      "description": "Tecido de alta performance com tecnologia de rápida secagem, ideal para treinos intensos no frio.",
+      "price": 189.9,
+      "category": "Esportes"
+    },
+    {
+      "id": "17",
+      "name": "Halteres Ajustáveis Smart-Weight (Par)",
+      "image": "",
+      "description": "Halteres com peso ajustável de 2kg a 20kg através de um sistema de travamento rápido.",
+      "price": 999.9,
+      "category": "Esportes"
+    },
+    {
+      "id": "18",
+      "name": "Corda de Pular Speed Jump",
+      "image": "",
+      "description": "Corda de pular profissional com cabo de aço e rolamentos de alta velocidade para Crossfit e Cardio.",
+      "price": 69.9,
+      "category": "Esportes"
+    },
+    {
+      "id": "19",
+      "name": "Relógio Fitness Multisport X1",
+      "image": "",
+      "description": "Monitora frequência cardíaca, GPS, sono e mais de 15 modalidades esportivas.",
+      "price": 549.9,
+      "category": "Esportes"
     }
   ]
 }
