@@ -1,0 +1,23 @@
+<section class="cart-page">
+  <h2>Sacola de Compras</h2>
+
+  <div *ngIf="cart.length === 0">
+    <p>Sua sacola está vazia.</p>
+  </div>
+
+  <div class="cart-item" *ngFor="let item of cart">
+    <img [src]="item.image" class="thumb">
+
+    <div class="info">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.price | currency:'BRL' }}</p>
+    </div>
+
+    <button class="remove-btn" (click)="remove(item.id)">Remover</button>
+  </div>
+
+  <div class="cart-total" *ngIf="cart.length > 0">
+    <h3>Total: {{ total | currency:'BRL' }}</h3>
+    <button class="checkout-btn">Finalizar Compra</button>
+  </div>
+</section>

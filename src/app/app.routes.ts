@@ -12,21 +12,22 @@ import { Infantil } from './pages/infantil/infantil';
 import { Esportes } from './pages/esportes/esportes';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redireciona para home
-    { path: 'home', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'admin', component: AdminPanelComponent }, 
-    { path: 'forgot-password', component: ForgotPasswordComponent},
-    { path: 'lancamentos', component: Lancamentos },
-    { path: 'masculino', component: Masculino },
-    { path: 'feminino', component: Feminino },
-    { path: 'infantil', component: Infantil },
-    { path: 'esportes', component: Esportes },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redireciona para home
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'admin', component: AdminPanelComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'lancamentos', component: Lancamentos },
+  { path: 'masculino', component: Masculino },
+  { path: 'feminino', component: Feminino },
+  { path: 'infantil', component: Infantil },
+  { path: 'esportes', component: Esportes },
+  {path: 'sacola', loadComponent: () => import('./pages/cart/cart').then(m => m.CartComponent)},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

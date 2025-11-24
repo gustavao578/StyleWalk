@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,17 @@ import { AuthService } from '../../services/auth';
 })
 export class Navbar {
   // Injetamos o AuthService como 'public' para usar direto no HTML
-  constructor(public authService: AuthService, private router: Router) {}
+  cartCount = 0;
+
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private cartService: CartService
+  ) {}
+
+  ngDoCheck() {
+    this.cartCount = this.cartService.getCount();
+  }
 
   logout(): void {
     this.authService.logout();

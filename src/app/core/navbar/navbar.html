@@ -24,14 +24,17 @@
       </div>
 
       <div class="icons-area">
-        
+
         <button class="icon-btn"><span class="material-icons">favorite_border</span></button>
 
         <button class="icon-btn" *ngIf="!authService.isLoggedIn" routerLink="/login" title="Fazer Login">
           <span class="material-icons">person_outline</span>
         </button>
 
-        <button class="icon-btn"><span class="material-icons">shopping_bag</span></button>
+        <button class="icon-btn" routerLink="/sacola">
+          <span class="material-icons">shopping_bag</span>
+          <span class="bag-count" *ngIf="cartCount > 0">{{ cartCount }}</span>
+        </button>
 
         <button class="logout-btn" *ngIf="authService.isLoggedIn" (click)="logout()" title="Sair">
           <span class="material-icons">logout</span>

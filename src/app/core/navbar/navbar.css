@@ -120,6 +120,7 @@
   display: flex;
   align-items: center;
   padding: 0;
+  position: relative;
 }
 
 .icon-btn .material-icons {
@@ -128,6 +129,21 @@
 
 .icon-btn:hover {
   color: #ddd;
+}
+
+.bag-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Botão Sair Específico */
