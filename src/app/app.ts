@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { Header } from "./core/header/header"; // Admin Header
 import { Navbar } from "./core/navbar/navbar"; // Client/Guest Navbar
 import { AuthService } from './services/auth';
+import { FooterComponent } from "./core/footer/footer";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Navbar, CommonModule],
+  imports: [RouterOutlet, Header, Navbar, CommonModule, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

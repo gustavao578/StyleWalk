@@ -1,0 +1,211 @@
+/* Importando fonte padrão (se não estiver no styles.css global) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:host {
+  /* Variáveis Locais do Componente */
+  --primary-color: #C92071;     /* Rosa StyleWalk */
+  --bg-footer: #1F1F1F;         /* Fundo Principal */
+  --bg-newsletter: #252525;     /* Fundo Newsletter */
+  --text-white: #FFFFFF;
+  --text-gray: #CCCCCC;
+  --border-color: #333333;
+  
+  display: block;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  background-color: var(--bg-footer);
+  color: var(--text-white);
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Newsletter --- */
+.newsletter-section {
+  background-color: var(--bg-newsletter);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.newsletter-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: var(--text-white);
+}
+
+.newsletter-text p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: filter 0.2s;
+}
+
+.newsletter-form button:hover {
+  filter: brightness(1.1);
+}
+
+/* --- Grid Principal --- */
+.footer-main {
+  padding: 60px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* Logo StyleWalk */
+.brand-col .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.brand-col .logo span {
+  color: var(--primary-color);
+}
+
+.brand-desc {
+  color: var(--text-gray);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+/* Ícones */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 0.8rem; 
+  font-weight: bold;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+}
+
+/* Títulos e Links */
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a, 
+.contact-info li {
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+  border-top: 1px solid var(--border-color);
+  padding: 24px 0;
+  background-color: #181818;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* Tablet: 2 colunas */
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    text-align: left;
+  }
+}

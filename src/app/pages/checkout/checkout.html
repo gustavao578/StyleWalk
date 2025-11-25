@@ -1,0 +1,115 @@
+<div class="checkout-wrapper">
+  <div class="checkout-container">
+    
+    <!-- Coluna Esquerda: Dados e Pagamento -->
+    <div class="checkout-form">
+      <h1 class="section-title">Finalizar Compra</h1>
+
+      <!-- Seção 1: Dados Pessoais -->
+      <section class="form-section">
+        <h3><span class="step">1</span> Dados Pessoais</h3>
+        <div class="input-group">
+          <input type="text" placeholder="Nome Completo" [(ngModel)]="userData.fullName" class="input-field full">
+          <input type="email" placeholder="E-mail" [(ngModel)]="userData.email" class="input-field full">
+          <input type="tel" placeholder="Telefone" [(ngModel)]="userData.phone" class="input-field half">
+          <input type="text" placeholder="CPF (Opcional)" [(ngModel)]="userData.cpf" class="input-field half">
+        </div>
+      </section>
+
+      <!-- Seção 2: Endereço -->
+      <section class="form-section">
+        <h3><span class="step">2</span> Endereço de Entrega</h3>
+        <div class="input-group">
+          <input type="text" placeholder="CEP" [(ngModel)]="userData.zip" class="input-field half">
+          <div class="spacer half"></div>
+          <input type="text" placeholder="Rua" [(ngModel)]="userData.street" class="input-field full">
+          <input type="text" placeholder="Número" [(ngModel)]="userData.number" class="input-field third">
+          <input type="text" placeholder="Bairro" [(ngModel)]="userData.district" class="input-field third">
+          <input type="text" placeholder="Complemento" [(ngModel)]="userData.comp" class="input-field third">
+          <input type="text" placeholder="Cidade" [(ngModel)]="userData.city" class="input-field half">
+          <input type="text" placeholder="Estado" [(ngModel)]="userData.state" class="input-field half">
+        </div>
+      </section>
+
+      <!-- Seção 3: Pagamento -->
+      <section class="form-section">
+        <h3><span class="step">3</span> Pagamento</h3>
+        
+        <div class="payment-tabs">
+          <button [class.active]="paymentMethod === 'credit'" (click)="setPayment('credit')">
+            <span class="material-icons">credit_card</span> Cartão
+          </button>
+          <button [class.active]="paymentMethod === 'pix'" (click)="setPayment('pix')">
+            <span class="material-icons">qr_code</span> PIX
+          </button>
+          <button [class.active]="paymentMethod === 'boleto'" (click)="setPayment('boleto')">
+            <span class="material-icons">receipt</span> Boleto
+          </button>
+        </div>
+
+        <div class="payment-content">
+          <!-- Cartão -->
+          <div *ngIf="paymentMethod === 'credit'" class="fade-in">
+            <div class="input-group">
+              <input type="text" placeholder="Número do Cartão" [(ngModel)]="cardData.number" class="input-field full">
+              <input type="text" placeholder="Nome Impresso no Cartão" [(ngModel)]="cardData.name" class="input-field full">
+              <input type="text" placeholder="Validade (MM/AA)" [(ngModel)]="cardData.expiry" class="input-field half">
+              <input type="text" placeholder="CVV" [(ngModel)]="cardData.cvv" class="input-field half">
+            </div>
+          </div>
+
+          <!-- PIX -->
+          <div *ngIf="paymentMethod === 'pix'" class="fade-in pix-area">
+            <p>Aprovação imediata. Escaneie o QR Code após finalizar.</p>
+            <div class="discount-tag">5% de desconto no PIX</div>
+          </div>
+
+          <!-- Boleto -->
+          <div *ngIf="paymentMethod === 'boleto'" class="fade-in boleto-area">
+            <p>Vencimento em 2 dias úteis.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Coluna Direita: Resumo do Pedido (Sticky) -->
+    <div class="checkout-summary">
+      <div class="summary-card">
+        <h3>Resumo do Pedido</h3>
+        
+        <div class="items-list">
+          <div class="item" *ngFor="let item of cartItems">
+            <img [src]="item.image" alt="">
+            <div class="item-info">
+              <span>{{ item.name }}</span>
+              <small>Qtd: {{ item.qty }}</small>
+            </div>
+            <div class="item-price">{{ item.price | currency:'BRL' }}</div>
+          </div>
+        </div>
+
+        <div class="totals">
+          <div class="row">
+            <span>Subtotal</span>
+            <span>{{ subtotal | currency:'BRL' }}</span>
+          </div>
+          <div class="row">
+            <span>Frete</span>
+            <span>{{ shipping | currency:'BRL' }}</span>
+          </div>
+          <div class="row total">
+            <span>Total</span>
+            <span>{{ total | currency:'BRL' }}</span>
+          </div>
+        </div>
+
+        <button class="btn-finish" (click)="finishOrder()">FINALIZAR COMPRA</button>
+        
+        <div class="security-seal">
+          <span class="material-icons">lock</span> Compra 100% Segura
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

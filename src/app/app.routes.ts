@@ -10,6 +10,8 @@ import { Masculino } from './pages/masculino/masculino';
 import { Feminino } from './pages/feminino/feminino';
 import { Infantil } from './pages/infantil/infantil';
 import { Esportes } from './pages/esportes/esportes';
+import { WishlistComponent } from './pages/listadesejo/listadesejo';
+import { CheckoutComponent } from './pages/checkout/checkout';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redireciona para home
@@ -23,6 +25,8 @@ export const routes: Routes = [
   { path: 'feminino', component: Feminino },
   { path: 'infantil', component: Infantil },
   { path: 'esportes', component: Esportes },
+  { path: 'wishlist', component: WishlistComponent},
+  { path: 'checkout', component:  CheckoutComponent},
   {path: 'sacola', loadComponent: () => import('./pages/cart/cart').then(m => m.CartComponent)},
 ];
 

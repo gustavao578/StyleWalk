@@ -1,0 +1,68 @@
+<footer class="footer-container">
+  <div class="newsletter-section">
+    <div class="container newsletter-wrapper">
+      <div class="newsletter-text">
+        <h3>Assine nossa Newsletter</h3>
+        <p>Receba ofertas, novidades e drops exclusivos da StyleWalk.</p>
+      </div>
+      
+      <form class="newsletter-form" (submit)="onSubmit($event)">
+        <input type="email" placeholder="Digite seu e-mail" required />
+        <button type="submit">INSCREVER-SE</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-main">
+    <div class="footer-grid">
+      
+      <div class="footer-col brand-col">
+        <div class="logo">StyleWalk<span>.</span></div>
+        <p class="brand-desc">
+          A sua loja de referência em sneakers e streetwear. 
+          Onde o estilo encontra o conforto e a autenticidade.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f">FB</i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram">IG</i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter">TW</i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informação</h4>
+        <ul>
+          <li *ngFor="let link of informationLinks">
+            <a [href]="link.url">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul>
+          <li *ngFor="let link of categoryLinks">
+            <a [href]="link.url">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul class="contact-info">
+          <li>Av. Santos Dumont, 1510 - 1º Andar</li>
+          <li>Aldeota, Fortaleza - CE</li>
+          <li>(85) 3051-3411</li>
+          <li>contato@stylewalk.com</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {{ currentYear }} StyleWalk Digital Store. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>

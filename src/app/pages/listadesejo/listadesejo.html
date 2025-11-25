@@ -1,0 +1,30 @@
+<section class="wishlist-container">
+  <div class="wishlist-header">
+    <h2>Meus Favoritos</h2>
+    <p>{{ favorites.length }} itens salvos</p>
+  </div>
+
+  <div *ngIf="favorites.length === 0" class="empty-state">
+    <span class="material-icons">favorite_border</span>
+    <h3>Sua lista está vazia</h3>
+    <a routerLink="/home" class="btn-back">Explorar Produtos</a>
+  </div>
+
+  <div class="wishlist-grid" *ngIf="favorites.length > 0">
+    <div class="wishlist-card" *ngFor="let product of favorites">
+      <div class="card-image">
+        <img [src]="product.image" [alt]="product.name">
+        <button class="btn-remove" (click)="remove(product.id)" title="Remover">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      <div class="card-info">
+        <h3>{{ product.name }}</h3>
+        <p class="price">{{ product.price | currency:'BRL' }}</p>
+        <div class="card-actions">
+          <button class="btn-buy" routerLink="/checkout">Comprar Agora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
