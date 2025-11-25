@@ -11,22 +11,37 @@
     <h2>Destaques da Semana</h2>
     <a href="#" class="view-all">Ver todos</a>
   </div>
-  
+
   <div id="product-list">
     <div *ngFor="let product of products" class="product-card-modern">
+
       <div class="image-container">
         <img [src]="product.image" alt="{{ product.name }}">
         <span class="category-tag">{{ product.category }}</span>
+
+        <!-- ❤️ BOTÃO DE FAVORITAR -->
+     <button class="favorite-btn" (click)="toggleFavorite(product)">
+      <svg *ngIf="!isFavorite(product)" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff0055" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+        </svg>
+
+        <svg *ngIf="isFavorite(product)" width="26" height="26" viewBox="0 0 24 24" fill="#ff0055" stroke="#ff0055" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+        </svg>
+      </button>
+
       </div>
-      
+
       <div class="card-details">
         <h3 class="product-name">{{ product.name }}</h3>
         <p class="product-desc">{{ product.description }}</p>
+
         <div class="price-action">
           <span class="price">{{ product.price | currency:'BRL' }}</span>
           <button class="add-btn" (click)="add(product)">+</button>
         </div>
       </div>
+
     </div>
   </div>
 </section>

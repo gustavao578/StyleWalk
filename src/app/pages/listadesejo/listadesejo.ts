@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../model/product.model';
 import { RouterLink } from '@angular/router';
-import { ListaDesejoService } from '../../services/listadesejo';
 
 @Component({
   selector: 'app-wishlist',
@@ -14,15 +13,17 @@ import { ListaDesejoService } from '../../services/listadesejo';
 export class WishlistComponent implements OnInit {
   favorites: Product[] = [];
 
-  constructor(private wishlistService: ListaDesejoService) {}
-
   ngOnInit() {
-    this.wishlistService.wishlist$.subscribe(items => {
-      this.favorites = items;
-    });
+    this.loadFavorites();
+  }
+
+  loadFavorites() {
+    const data = localStorage.getItem('favoritos');
+    this.favorites = data ? JSON.parse(data) : [];
   }
 
   remove(id: number) {
-    this.wishlistService.removeFromWishlist(id);
+    this.favorites = this.favorites.filter(p => p.id !== id);
+    localStorage.setItem('favoritos', JSON.stringify(this.favorites));
   }
 }
