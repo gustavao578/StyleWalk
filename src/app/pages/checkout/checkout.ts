@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CartItem, CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -9,15 +11,13 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './checkout.html',
   styleUrls: ['./checkout.css']
 })
-export class CheckoutComponent {
+export class CheckoutComponent implements OnInit {
   paymentMethod: 'credit' | 'pix' | 'boleto' = 'credit';
   
-  // Dados mockados para simular o carrinho
-  cartItems = [
-    { name: 'UltraBoost Runner', price: 899.90, qty: 1, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=100&q=80' },
-    { name: 'Meias Performance', price: 49.90, qty: 2, image: 'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&w=100&q=80' }
-  ];
+  // Lista de itens carregada do carrinho
+  cartItems: CartItem[] = [];
 
+  // Dados do formulário
   userData = {
     fullName: '', email: '', phone: '', cpf: '',
     zip: '', street: '', number: '', district: '', city: '', state: '', comp: ''
@@ -25,8 +25,25 @@ export class CheckoutComponent {
 
   cardData = { number: '', name: '', expiry: '', cvv: '' };
 
+  constructor(
+    private cartService: CartService,
+    private router: Router
+  ) {}
+
+  // ESTE É O MÉTODO QUE VOCÊ PRECISA
+  ngOnInit() {
+    // Carrega os produtos armazenados no serviço de carrinho
+    this.cartItems = this.cartService.getCart();
+
+    // Segurança: Se não houver itens, volta para a home
+    if (this.cartItems.length === 0) {
+      this.router.navigate(['/home']);
+    }
+  }
+
+  // Getters para cálculos automáticos no HTML
   get subtotal(): number {
-    return this.cartItems.reduce((acc, item) => acc + (item.price * item.qty), 0);
+    return this.cartService.getTotal();
   }
 
   get shipping(): number {
@@ -42,6 +59,13 @@ export class CheckoutComponent {
   }
 
   finishOrder() {
+    // Aqui entraria a integração com backend real
     alert('Pedido realizado com sucesso! Obrigado pela compra.');
+    
+    // Limpa o carrinho após a compra
+    this.cartService.clearCart();
+    
+    // Redireciona para a home
+    this.router.navigate(['/home']);
   }
 }

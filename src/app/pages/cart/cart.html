@@ -1,23 +1,41 @@
-<section class="cart-page">
-  <h2>Sacola de Compras</h2>
+<section class="cart-container">
+  <h2>Meu Carrinho</h2>
 
-  <div *ngIf="cart.length === 0">
-    <p>Sua sacola está vazia.</p>
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Seu carrinho está vazio.</p>
+    <a routerLink="/home" class="btn-back">Voltar às compras</a>
   </div>
 
-  <div class="cart-item" *ngFor="let item of cart">
-    <img [src]="item.image" class="thumb">
-
-    <div class="info">
-      <h3>{{ item.name }}</h3>
-      <p>{{ item.price | currency:'BRL' }}</p>
+  <div *ngIf="cartItems.length > 0" class="cart-content">
+    <!-- Lista de Produtos -->
+    <div class="cart-items">
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <img [src]="item.image" [alt]="item.name">
+        <div class="item-details">
+          <h3>{{ item.name }}</h3>
+          <p class="price">{{ item.price | currency:'BRL' }}</p>
+        </div>
+        <div class="item-actions">
+          <button (click)="updateQty(item.id, item.qty - 1)">-</button>
+          <span>{{ item.qty }}</span>
+          <button (click)="updateQty(item.id, item.qty + 1)">+</button>
+        </div>
+        <button class="btn-remove" (click)="removeItem(item.id)">Remover</button>
+      </div>
     </div>
 
-    <button class="remove-btn" (click)="remove(item.id)">Remover</button>
-  </div>
-
-  <div class="cart-total" *ngIf="cart.length > 0">
-    <h3>Total: {{ total | currency:'BRL' }}</h3>
-    <button class="checkout-btn">Finalizar Compra</button>
+    <!-- Resumo e Botão Finalizar -->
+    <div class="cart-summary">
+      <h3>Resumo</h3>
+      <div class="summary-row">
+        <span>Total</span>
+        <span class="total-price">{{ total | currency:'BRL' }}</span>
+      </div>
+      
+      <!-- BOTÃO ATUALIZADO CHAMANDO irParaCheckout() -->
+      <button class="btn-checkout" (click)="irParaCheckout()">
+        Finalizar Compra
+      </button>
+    </div>
   </div>
 </section>

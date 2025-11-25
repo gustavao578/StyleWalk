@@ -1,7 +1,7 @@
 <div class="checkout-wrapper">
   <div class="checkout-container">
     
-    <!-- Coluna Esquerda: Dados e Pagamento -->
+    <!-- Coluna Esquerda: Formulários -->
     <div class="checkout-form">
       <h1 class="section-title">Finalizar Compra</h1>
 
@@ -12,7 +12,7 @@
           <input type="text" placeholder="Nome Completo" [(ngModel)]="userData.fullName" class="input-field full">
           <input type="email" placeholder="E-mail" [(ngModel)]="userData.email" class="input-field full">
           <input type="tel" placeholder="Telefone" [(ngModel)]="userData.phone" class="input-field half">
-          <input type="text" placeholder="CPF (Opcional)" [(ngModel)]="userData.cpf" class="input-field half">
+          <input type="text" placeholder="CPF" [(ngModel)]="userData.cpf" class="input-field half">
         </div>
       </section>
 
@@ -25,7 +25,6 @@
           <input type="text" placeholder="Rua" [(ngModel)]="userData.street" class="input-field full">
           <input type="text" placeholder="Número" [(ngModel)]="userData.number" class="input-field third">
           <input type="text" placeholder="Bairro" [(ngModel)]="userData.district" class="input-field third">
-          <input type="text" placeholder="Complemento" [(ngModel)]="userData.comp" class="input-field third">
           <input type="text" placeholder="Cidade" [(ngModel)]="userData.city" class="input-field half">
           <input type="text" placeholder="Estado" [(ngModel)]="userData.state" class="input-field half">
         </div>
@@ -48,23 +47,17 @@
         </div>
 
         <div class="payment-content">
-          <!-- Cartão -->
           <div *ngIf="paymentMethod === 'credit'" class="fade-in">
             <div class="input-group">
               <input type="text" placeholder="Número do Cartão" [(ngModel)]="cardData.number" class="input-field full">
-              <input type="text" placeholder="Nome Impresso no Cartão" [(ngModel)]="cardData.name" class="input-field full">
-              <input type="text" placeholder="Validade (MM/AA)" [(ngModel)]="cardData.expiry" class="input-field half">
+              <input type="text" placeholder="Nome Impresso" [(ngModel)]="cardData.name" class="input-field full">
+              <input type="text" placeholder="Validade" [(ngModel)]="cardData.expiry" class="input-field half">
               <input type="text" placeholder="CVV" [(ngModel)]="cardData.cvv" class="input-field half">
             </div>
           </div>
-
-          <!-- PIX -->
           <div *ngIf="paymentMethod === 'pix'" class="fade-in pix-area">
-            <p>Aprovação imediata. Escaneie o QR Code após finalizar.</p>
-            <div class="discount-tag">5% de desconto no PIX</div>
+            <p>Aprovação imediata. 5% de desconto.</p>
           </div>
-
-          <!-- Boleto -->
           <div *ngIf="paymentMethod === 'boleto'" class="fade-in boleto-area">
             <p>Vencimento em 2 dias úteis.</p>
           </div>
@@ -72,14 +65,15 @@
       </section>
     </div>
 
-    <!-- Coluna Direita: Resumo do Pedido (Sticky) -->
+    <!-- Coluna Direita: Resumo do Pedido -->
     <div class="checkout-summary">
       <div class="summary-card">
         <h3>Resumo do Pedido</h3>
         
+        <!-- Listagem dos produtos vindos do carrinho -->
         <div class="items-list">
           <div class="item" *ngFor="let item of cartItems">
-            <img [src]="item.image" alt="">
+            <img [src]="item.image" alt="Produto">
             <div class="item-info">
               <span>{{ item.name }}</span>
               <small>Qtd: {{ item.qty }}</small>
@@ -104,10 +98,6 @@
         </div>
 
         <button class="btn-finish" (click)="finishOrder()">FINALIZAR COMPRA</button>
-        
-        <div class="security-seal">
-          <span class="material-icons">lock</span> Compra 100% Segura
-        </div>
       </div>
     </div>
 
