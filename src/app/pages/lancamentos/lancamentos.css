@@ -3,7 +3,7 @@
 .hero-banner {
   width: 100%;
   height: 300px;
-  background: url('/assets/banner/banner-lancamentos.jpg') center/cover no-repeat;
+  background: url('https://images-ext-1.discordapp.net/external/J0H3kP8OwBBLa1reGS0QvY9eZoifndg9dZLcyksGEdk/%3Fq%3D80%26w%3D1170%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1712167631738-4dab9e53c853?format=webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

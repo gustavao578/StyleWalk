@@ -67,7 +67,7 @@
     {
       "id": "9",
       "name": "Flex Experience",
-      "image": "https://images.unsplash.com/photo-1560769629-975e13f0c470?auto=format&fit=crop&w=500&q=80",
+      "image": "https://images-ext-1.discordapp.net/external/ORIrF7WBAUfY3M7y9KZ50u73k4eK2q3GM8iG5_i3Bqg/%3Fq%3D80%26w%3D1170%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1720070827942-c67f31b68d1a?format=webp",
       "description": "Movimento natural para seus pés.",
       "price": 359.9,
       "category": "Feminino"
@@ -82,73 +82,73 @@
     },
     {
       "id": "11",
-      "name": "Downshifter 12",
+      "name": "Nike Downshifter 12 Kids",
       "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80",
-      "description": "Suporte leve e flexível.",
+      "description": "Tênis infantil leve e flexível para o dia a dia.",
       "price": 349.9,
       "category": "Infantil"
     },
     {
       "id": "12",
-      "name": "Coreracer",
+      "name": "Adidas Coreracer Feminino",
       "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=500&q=80",
-      "description": "Conforto o dia todo.",
+      "description": "Tênis feminino confortável para caminhadas e uso casual.",
       "price": 249.9,
       "category": "Feminino"
     },
     {
       "id": "13",
-      "name": "Bola Mágica Arco-Íris",
-      "image": "",
-      "description": "Bola super macia e colorida que acende ao quicar. Ideal para crianças pequenas.",
-      "price": 49.9,
+      "name": "Tênis ColorFun Kids",
+      "image": "https://images-ext-1.discordapp.net/external/7uuM-l8RiiSFWKwzpltBYfutAW0YN1HKXDcpy2DYOjg/%3Fq%3D80%26w%3D1176%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1598691800903-24951242c503?format=webp",
+      "description": "Tênis infantil com luzes em LED que acendem ao caminhar.",
+      "price": 149.9,
       "category": "Infantil"
     },
     {
       "id": "14",
-      "name": "Quebra-Cabeça Gigante da Selva",
-      "image": "",
-      "description": "Quebra-cabeça de 50 peças extra-grandes, com ilustrações de animais da selva.",
-      "price": 79.9,
+      "name": "Tênis Jungle Runner Kids",
+      "image": "https://images-ext-1.discordapp.net/external/ToiGeSyn5dS5Xu6oQecn7-aRWytlVud1_MgX3SJSDzM/%3Fq%3D80%26w%3D1171%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1678192568444-78b428b7cd1a?format=webp",
+      "description": "Tênis infantil com estampas de animais e sola antiderrapante.",
+      "price": 129.9,
       "category": "Infantil"
     },
     {
       "id": "15",
-      "name": "Kit de Blocos Construtores Espaciais",
-      "image": "https://www.google.com/aclk?sa=L&ai=DChsSEwi8vd3P6bCQAxXqRUgAHVlfMIwYACICCAEQFxoCY2U&co=1&ase=2&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mTO-KSim21ITgcGAY1uKtFl-pW_3R99Bs5TNP1LRSpexmanuqErYNBoCqVcQAvD_BwE&cid=CAASQ-RoV0E8bt_KDctUBaNgEO_CzTN2uIgoa8SshwGXj1iqhSiRCc6dhabcKJx2NZ4dw9atoMBiTaSVbqx6O-bVGXrCMag&cce=2&category=acrcp_v1_32&sig=AOD64_0OlKRsBnaa2wKF6ILRT_0fSaWIXg&ctype=5&q=&nis=4&ved=2ahUKEwjS3NfP6bCQAxWOqZUCHQl-LnoQwg8oAXoECAgQIg&adurl=",
-      "description": "Conjunto com 100 blocos para montar naves espaciais e robôs.",
+      "name": "Tênis Space Explorer Kids",
+      "image": "https://images-ext-1.discordapp.net/external/8f2-CLQzf2iWqjcao-B2LBd2yiNwQ-lzCT7m4IkZi-I/%3Fq%3D80%26w%3D1170%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1606753930828-fdcc943a273e?format=webp",
+      "description": "Tênis infantil temático do espaço, leve e super resistente.",
       "price": 119.9,
       "category": "Infantil"
     },
     {
       "id": "16",
-      "name": "Camisa Térmica Pro-Dry",
-      "image": "",
-      "description": "Tecido de alta performance com tecnologia de rápida secagem, ideal para treinos intensos no frio.",
+      "name": "Tênis Esportivo Pro-Dry",
+      "image": "https://images-ext-1.discordapp.net/external/k3R3CBp4lTbJM34eiOdCa2qdtDn9C82Wffgw9wHs87M/%3Fq%3D80%26w%3D1170%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1542291026-7eec264c27ff?format=webp",
+      "description": "Tênis esportivo de alta performance com tecido respirável.",
       "price": 189.9,
       "category": "Esportes"
     },
     {
       "id": "17",
-      "name": "Halteres Ajustáveis Smart-Weight (Par)",
-      "image": "",
-      "description": "Halteres com peso ajustável de 2kg a 20kg através de um sistema de travamento rápido.",
-      "price": 999.9,
+      "name": "Tênis Smart-Runner Pro",
+      "image": "https://images-ext-1.discordapp.net/external/wYMBuVJlnhbvwCig-TTtjM6aqOGqO0KzjE9ywb3OeBk/%3Fq%3D80%26w%3D1170%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1667314614144-70f573045acf?format=webp",
+      "description": "Tênis de treino multiuso com sola reforçada e máximo amortecimento.",
+      "price": 399.9,
       "category": "Esportes"
     },
     {
       "id": "18",
-      "name": "Corda de Pular Speed Jump",
-      "image": "",
-      "description": "Corda de pular profissional com cabo de aço e rolamentos de alta velocidade para Crossfit e Cardio.",
-      "price": 69.9,
+      "name": "Tênis Speed Jump Pro",
+      "image": "https://images-ext-1.discordapp.net/external/Y68QPHasD7ovCJ5ybcQFw-MTZu3h0ZIkirYEFeKMl8s/%3Fq%3D80%26w%3D1631%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1634624943305-4c8f49ba7226?format=webp&width=1521&height=856",
+      "description": "Tênis leve para treinos de cardio, ideal para alta velocidade.",
+      "price": 299.9,
       "category": "Esportes"
     },
     {
       "id": "19",
-      "name": "Relógio Fitness Multisport X1",
-      "image": "",
-      "description": "Monitora frequência cardíaca, GPS, sono e mais de 15 modalidades esportivas.",
+      "name": "Tênis Multisport X1",
+      "image": "https://images-ext-1.discordapp.net/external/yXI6MRxfpu6p25D5DY4JON0xf54pR7mRx8_5yRRc32o/%3Fq%3D80%26w%3D1116%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1739132268718-53d64165d29a?format=webp",
+      "description": "Tênis versátil para corrida, treino ou uso diário.",
       "price": 549.9,
       "category": "Esportes"
     }
