@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductService } from '../../services/product';
 import { Product } from '../../model/product.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-feminino',
@@ -15,12 +16,18 @@ export class Feminino implements OnInit {
 
   femininos: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe(products => {
       // Filtra apenas Feminino
       this.femininos = products.filter(p => p.category === 'Feminino');
     });
+  }
+  
+  add(product: Product) {
+    this.cartService.addToCart(product);
   }
 }
