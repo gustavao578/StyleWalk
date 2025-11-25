@@ -1,5 +1,4 @@
-/* Importando fonte padrão (se não estiver no styles.css global) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+/* Fonte agora carregada globalmente no index.html/styles.css */
 
 :host {
   /* Variáveis Locais do Componente */
